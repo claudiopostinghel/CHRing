@@ -288,7 +288,7 @@
 	}
 
 	canvas {
-		border: 1px solid red;
+		/* border: 1px solid red; */
 		margin-bottom: 40px;
 		background-color: transparent;
 		/* background-image: url("images/anteprima.png"); */
