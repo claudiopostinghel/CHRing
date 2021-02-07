@@ -124,6 +124,11 @@
 		</div>
 	</a>
 
+	<div class="darkContainer">
+		<h4>An example:</h4>
+		<img id="ryan" src="images/example.png" alt="">
+	</div>
+
 	<div class="card">
 
 		<center>
@@ -143,7 +148,7 @@
 			
 			
 			<div class="upload-btn-wrapper">
-				<button class="btn">🚀 Pimp your avatar!</button>
+				<button class="btn">🚀 Upload</button>
 				<input  type="file"  accept="image/*" name="myfile" id="file"  on:change={loadFile} />
 			</div>
 			<br>
@@ -160,8 +165,11 @@
 	<div class="darkContainer">
 		<h4>How does it work</h4>
 		<p>Simple, yet effective — it put a contrast–ring that make you the most notable person in the room!</p>
-		<p>Here's an example:</p>
-		<img id="ryan" src="images/example.png" alt="">
+		<blockquote>
+			Gestalt psychologists emphasized that organisms perceive entire patterns or configurations, not merely individual components. <br>
+			The view is sometimes summarized using the adage, "the whole is more than the sum of its parts." <br>
+			It determine how humans perceive visuals in connection with different objects and environments. <br>
+		</blockquote>
 	</div>
 
 
