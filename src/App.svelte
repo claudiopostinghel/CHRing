@@ -173,10 +173,6 @@
 		position: relative;
 	}
 
-	input {
-		/* border: 1px solid red; */
-	}
-
 	canvas {
 		/* border: 1px solid red; */
 		margin-bottom: 40px;
@@ -232,9 +228,9 @@
 		font-size: 24px;
 	}
 
-	.btn.disabled {
+	/* .btn.disabled {
 		background-color: grey;
-	}
+	} */
 
 	.upload-btn-wrapper input[type=file] {
 		font-size: 100px;
