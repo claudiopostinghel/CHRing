@@ -360,6 +360,8 @@
 	}
 
 	select {
+		-webkit-appearance: none;
+		
 		margin-top: 32px;
 		padding: 16px 24px;
 
@@ -373,9 +375,8 @@
 
 		cursor: pointer !important;
 
-		-webkit-appearance: none;
 	}
-	
+
 	#download {
 		margin-top: 32px;
 	}
