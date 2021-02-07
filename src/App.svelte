@@ -148,16 +148,12 @@
 				<canvas id="myCanvas" height="300" width="300"></canvas>
 
 			</div>
-
-
-			<br>
 			
 			
-			<div class="upload-btn-wrapper">
+			<div id="uploadWrapper" class="upload-btn-wrapper">
 				<button class="btn">🚀 Upload</button>
 				<input  type="file"  accept="image/*" name="myfile" id="file"  on:change={loadFile} />
 			</div>
-			<br>
 
 			{#if downloadable}
 				<button id="download" class="btn" on:click={downloadAvatar} >😍 Download</button>
@@ -237,8 +233,8 @@
 	}
 
 	#canvasSpace {
-		height: 300px;
 		width: 300px;
+		height: 300px;
 		position: relative;
 
 		cursor: pointer;
@@ -283,6 +279,10 @@
 	
 
 	/* INPUT VERDE */
+	#uploadWrapper {
+		display: none;
+		margin: 0;
+	}
 
 	.upload-btn-wrapper {
 		position: relative;
@@ -306,6 +306,10 @@
 		font-size: 24px;
 
 		cursor: pointer !important;
+	}
+
+	#download {
+		margin-top: 32px;
 	}
 
 	/* .btn.disabled {
