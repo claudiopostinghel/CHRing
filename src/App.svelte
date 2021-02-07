@@ -113,7 +113,8 @@
 	<h4>Stand out!</h4>
 	<p>Rooms are crowded. Never go unnoticed, thanks to <a href="https://en.wikipedia.org/wiki/Gestalt_psychology">Gestalt psychology</a></p>
 
-	<div class="darkContainer" style="padding:12px 24px">
+	<div id="promoteSpace" class="darkContainer dotted" style="padding:12px 24px; display: flex; flex-direction: row;">
+		<img id="plusImage" src="images/plus.svg" alt="plus icon">
 		Do you want this space? — Let's talk!
 	</div>
 
@@ -179,6 +180,20 @@
 		/* min-height: 100vh; */
 
 		overflow: hidden;
+	}
+
+	#promoteSpace {
+		border: 2px dotted #6E664E;
+		justify-content: left;
+		align-items: center;
+	}
+
+	#plusImage {
+		height: 1em;
+		width: auto;
+
+		display: inline-block;
+		margin-right: 8px;
 	}
 
 	.darkContainer, .card {
