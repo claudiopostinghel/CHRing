@@ -110,8 +110,12 @@
 
 <main>
 	
-	<h4>Outstand in CH</h4>
-	<p>Pellentesque aliquam porttitor nisi sociosqu venenatis fermentum pulvinar lobortis curabitur cum habitant, mollis augue ornare netus nunc lectus diam torquent scelerisque commodo, quisque ac sagittis tortor platea natoque suscipit justo per auctor.</p>
+	<h4>Stand out!</h4>
+	<p>Rooms are crowded. Never go unnoticed, thanks to <a href="https://en.wikipedia.org/wiki/Gestalt_psychology">Gestalt psychology</a></p>
+
+	<div class="darkContainer" style="padding:12px 24px">
+		Do you want this space? — Let's talk!
+	</div>
 
 	<div class="card">
 
@@ -145,6 +149,16 @@
 
 	</div>
 
+
+	<div class="darkContainer">
+		<h4>How does it work</h4>
+		<p>Simple, yet effective — it put a contrast–ring that make you the most notable person in the room!</p>
+		<p>Here's an example:</p>
+		<img id="ryan" src="images/example.png" alt="">
+	</div>
+
+
+	<!-- Stuff for the script -->
 	<img id="output" class="hide" width="200" alt="" />
 	<img id="exampleImage" class="hide" src="images/ryan_hoover.jpg" width="200" alt="" />
 	<img id="newProfileImage" class="hide" src="" alt="">
@@ -159,12 +173,28 @@
 		max-width: 600px;
 		width: 100%;
 		margin: 0 auto;
-		padding: 8px;
+		padding: 16px;
 
 		/* For size */
 		/* min-height: 100vh; */
 
 		overflow: hidden;
+	}
+
+	.darkContainer, .card {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		margin-bottom: 32px;
+	}
+
+	.darkContainer {
+		/* Dark closure */
+		background: #E6E3D6;
+		border-radius: 24px;
+
+		padding: 32px;
 	}
 
 	#canvasSpace {
@@ -184,9 +214,18 @@
 		left: 0;
 	}
 
+	#ryan {
+		height: 120px;
+		width: 320px;
+	}
+
 	.hide {
 		display: none;
 	}
+
+	/* .margin0auto {
+		margin: 0 auto;
+	} */
 
 	.card {
 		/* Card */
@@ -196,8 +235,6 @@
 		border-radius: 24px;
 
 		width: 100%;
-
-		margin: 0 auto;
 		padding: 32px;
 	}
 

@@ -19,7 +19,7 @@ body {
 	box-sizing: border-box;
 	font-family: 'Nunito', sans-serif;
 	
-	padding-top: 120px;
+	padding-top: 32px;
 	background: #F1EFE5;
 	
 	font-family: Nunito;
@@ -56,4 +56,10 @@ h3 {
 
 h1, h2, h3, h4 {
 	color: rgba(0, 0, 0, 1);
+	margin-top: 0;
+}
+
+a {
+	color: rgba(0, 0, 0, 0.8);
+	font-weight: 500;
 }
