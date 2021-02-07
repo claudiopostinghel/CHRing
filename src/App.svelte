@@ -112,6 +112,8 @@
 			// ctx.lineWidth = lineWidth;
 			// ctx.strokeStyle = lineColor;
 			// ctx.stroke(clubhousePath);
+
+			newProfileImage.src = canvas.toDataURL()
 			
 		}, 1000);
 
@@ -129,21 +131,16 @@
 		newProfileImage.src = dataURI;
 
 		// For IE/Edge (PNG)
-		// if (window.navigator.msSaveBlob) {
-		// 	window.navigator.msSaveBlob(myCanvas.msToBlob(), fileName)
-		// } else {
-		// 	const a = document.createElement("a")
-		// 	a.href = canvas.toDataURL()
-		// 	document.body.appendChild(a)
-		// 	a.download = fileName
-		// 	a.click()
-		// 	document.body.removeChild(a)
-		// }
-
-		// data:image/png;base64,
-		// 'data:application/octet-stream;base64,'
-
-		window.location.href = "data:application/octet-stream;base64,,iVBORw0KGgoAAAANSUhEUgAAA4QAAAOECAYAAAD5Tv87AAAgAElEQVR4Xuy9CbRkR3Ulum++sebh1awqlYYSGhkEMiqNgCQjjBi+wYhJGGPw8rxs9/fU/y93s9zt9lr+3d9uaIPt72YWxgViMEYGGwNCDJIolcYSQlKpJCTVPE+v6g15/4rIOFE7zo17M/NNle+9qLWkfJkZ0z1x80bs2GefkyH9SxZIFkgWSBZIFpjGFjiy+bPLFqB7LrL6PPTU5qI+vBCj+TzUsi7U0YX6SA05upDVM+T1LiAzr/Mwms9BVp+LfLQPwBzUR+egXu+3f2O0D/W8335Xr3ejhiwfrXdlyLP2TZXlqNVGga7jqPUcrQNHaz09R5DjMPKuI+juPo4cdWRZHchzdJmyeY6sNopa7RTqtWPo6jqGIRzHnO6jGMUxdC06kb305uPtjyXVSBZIFkgWSBZIFggtMIaFLZkwWSBZIFkgWWCmWSC/5...DnDQFDwBAwBAyBAgEjhNYODAFDwBAwBBYNAUcum7PrqL9rmCZmNtDsTPF5A83MbKK56Q00PbOhOTM10piZWkfT54doZnqApqf6aWZqFU3P9NLcdDdNT3fT3GwXzc500dxMg2amGjQ726Dp6QbN8FUf+Dpr417EFGtt5zRWVuowvsE1TVo1OEd9q2aof3CKununqbd/knp7J6i3f4z6+49TT99J6uk9Tr19R6m79zh19R6hVT3HaHrgQOPG3zmwaBVjERsChoAhYAgYAiUCRgitKRgChoAhYAgseQSa994zTIOzgzQzN0RdPUM0Nz1EXc1iS+wammuuodm5IWrODlGTVtPc3ADNzQ60/s71u/+bM6uo2eghmmtQo2uGiGapu3uGqDFNPT2nqaf3BWr0nKCeviPUmJ0i6pmlRvccNZuz1Nc9RXPNM9S16iQ1Zk7TzNZTjXe9S5g4lzzEVgBDwBAwBAyBZYrA/werOxs5rkAwdAAAAABJRU5ErkJggg==";
+		if (window.navigator.msSaveBlob) {
+			window.navigator.msSaveBlob(myCanvas.msToBlob(), fileName)
+		} else {
+			const a = document.createElement("a")
+			a.href = canvas.toDataURL()
+			document.body.appendChild(a)
+			a.download = fileName
+			a.click()
+			document.body.removeChild(a)
+		}
 
 	}
 
@@ -208,7 +205,15 @@
 
 			{#if downloadable}
 				<button id="download" class="btn" on:click={downloadAvatar} >😍 Download</button>
+				<br>
+				<p style="margin-top: 20px">
+					Problem with your browser?<br>Long press and save the image below 👇
+				</p>
 			{/if}
+
+			<center>
+				<img id="newProfileImage" width={downloadable? 100:0} height={downloadable? 100:0} src="" alt="">
+			</center>
 
 		</center>
 
@@ -235,7 +240,6 @@
 	<!-- Stuff for the script -->
 	<img id="output" class="hide" width="200" alt="" />
 	<img id="exampleImage" class="hide" src="images/ryan_hoover.jpg" width="200" alt="" />
-	<img id="newProfileImage" class="hide" src="" alt="">
 	
 
 </main>
