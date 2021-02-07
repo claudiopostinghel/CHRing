@@ -129,16 +129,29 @@
 		newProfileImage.src = dataURI;
 
 		// For IE/Edge (PNG)
-		if (window.navigator.msSaveBlob) {
-			window.navigator.msSaveBlob(myCanvas.msToBlob(), fileName)
-		} else {
-			const a = document.createElement("a")
-			a.href = canvas.toDataURL()
-			document.body.appendChild(a)
-			a.download = fileName
-			a.click()
-			document.body.removeChild(a)
-		}
+		// if (window.navigator.msSaveBlob) {
+		// 	window.navigator.msSaveBlob(myCanvas.msToBlob(), fileName)
+		// } else {
+		// 	const a = document.createElement("a")
+		// 	a.href = canvas.toDataURL()
+		// 	document.body.appendChild(a)
+		// 	a.download = fileName
+		// 	a.click()
+		// 	document.body.removeChild(a)
+		// }
+
+		var reader = new FileReader();
+
+		reader.onload = function(e) {
+		var bdata = btoa(reader.result);
+		var datauri = canvas.toDataURL()
+		window.open(datauri);
+		newWindow = setTimeout(function() {
+			newWindow.document.title = "test.png";
+		}, 10);
+		};
+		reader.readAsBinaryString(iobBLOB);
+
 	}
 
 	function triggerAlternativeUpload() {
@@ -361,7 +374,7 @@
 
 	select {
 		-webkit-appearance: none;
-		
+
 		margin-top: 32px;
 		padding: 16px 24px;
 
