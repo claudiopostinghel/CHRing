@@ -156,12 +156,12 @@
 
 <main>
 
+	<!-- Promote?
 	<a href="mailto:claudiopostinghel@gmail.com" target="_blank" rel="noopener noreferrer">
 		<div id="promoteSpace" class="darkContainer dotted" style="padding:12px 24px; display: flex; flex-direction: row;">
-			<!-- <img id="plusImage" src="images/plus.svg" alt="plus icon"> -->
 			Promote your event on CH here
 		</div>
-	</a>
+	</a> -->
 	
 
 	<center>
@@ -208,7 +208,12 @@
 
 	</div>
 
-	<div class="darkContainer"></div>
+	<div class="darkContainer">
+		<p style="margin:0; text-align:center;">Feel free to
+			<a href="http://bit.ly/2OfAgCG" style="font-weight:600 !important;">buy me a coffee</a>
+			or
+			<a href="https://bit.ly/3oY9c7u" style="font-weight:600 !important;">follow me on Twitter</a> :)</p>
+	</div>
 
 	<div class="darkContainer">
 		<h4>Why does it work</h4>
