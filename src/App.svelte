@@ -208,9 +208,10 @@
 
 	</div>
 
+	<div class="darkContainer"></div>
 
 	<div class="darkContainer">
-		<h4>How does it work</h4>
+		<h4>Why does it work</h4>
 		<p>Simple, yet effective — it put a contrast–ring that make you the most notable person in the room!</p>
 		<blockquote>
 			Gestalt psychologists emphasized that organisms perceive entire patterns or configurations, not merely individual components. <br>
@@ -367,9 +368,9 @@
 
 		cursor: pointer !important;
 	}
-	select::-ms-expand {
+	/* select::-ms-expand {
 		display: none;
-	}
+	} */
 
 	#download {
 		margin-top: 32px;
