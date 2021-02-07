@@ -113,9 +113,6 @@
 </script>
 
 <main>
-	
-	<h4>Stand out!</h4>
-	<p>Rooms are crowded. Never go unnoticed, thanks to <a href="https://en.wikipedia.org/wiki/Gestalt_psychology">Gestalt psychology</a></p>
 
 	<a href="mailto:claudiopostinghel@gmail.com" target="_blank" rel="noopener noreferrer">
 		<div id="promoteSpace" class="darkContainer dotted" style="padding:12px 24px; display: flex; flex-direction: row;">
@@ -123,11 +120,20 @@
 			Promote your event on CH her
 		</div>
 	</a>
+	
 
-	<div class="darkContainer">
+	<center>
+		<h1>Stand out!</h1>
+		<p>Rooms are crowded. Never go unnoticed. </p>
+		<img id="ryan" src="images/example.png" alt="">
+	</center>
+
+	<!-- , thanks to <a href="https://en.wikipedia.org/wiki/Gestalt_psychology">Gestalt psychology</a></p> -->
+
+	<!-- <div class="darkContainer">
 		<h4>An example:</h4>
 		<img id="ryan" src="images/example.png" alt="">
-	</div>
+	</div> -->
 
 	<div class="card">
 
@@ -252,6 +258,7 @@
 	#ryan {
 		height: 120px;
 		width: 320px;
+		margin-bottom: 24px;
 	}
 
 	.hide {
