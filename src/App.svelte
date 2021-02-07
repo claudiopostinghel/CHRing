@@ -48,7 +48,7 @@
         curWidth = this.width;
     };
 	var fileName = "Clubhouse standing profile pic.png";
-	var clubhousePathClip = new Path2D("M1.6634 160.327C1.48961 151.123 1.40552 145.965 1.66329 136.773C2.92339 91.8387 18.6689 58.0822 43.3983 35.5565C68.1332 13.0258 101.902 1.68893 139.28 1.68867C142.88 1.68865 145.917 1.63605 148.785 1.58639C154.066 1.49496 158.772 1.41346 165.366 1.68824C205.714 3.36958 237.794 14.5023 260.311 36.2831C282.826 58.0618 295.85 90.5538 297.951 135.098C297.97 135.499 297.988 135.894 298.007 136.283C298.516 147.052 298.82 153.467 297.952 164.507C295.008 201.931 285.972 233.169 265.444 256.102C244.924 279.027 212.849 293.731 163.66 297.935C153.527 298.8 147.291 298.519 137.989 298.099C136.797 298.045 135.555 297.989 134.248 297.933C95.1774 296.253 62.4629 284.075 39.3078 261.237C16.1558 238.403 2.5042 204.856 1.6634 160.327Z");
+	var clubhousePathClip = new Path2D("M6.98708 480.792C6.46915 453.361 6.21819 437.972 6.98698 410.557C10.7483 276.431 57.7574 175.572 131.675 108.242C205.597 40.9066 306.479 7.063 418.055 7.06221C428.748 7.06214 437.785 6.90577 446.328 6.75796C462.083 6.48536 476.154 6.24187 495.83 7.06178C616.214 12.0783 712.071 45.3009 779.399 110.427C846.725 175.552 885.593 272.645 891.862 405.549C891.918 406.747 891.974 407.927 892.029 409.09C893.548 441.178 894.455 460.346 891.863 493.308C883.085 604.92 856.124 698.259 794.746 766.831C733.374 835.394 637.522 879.273 490.789 891.812C460.528 894.397 441.884 893.556 414.164 892.305C410.613 892.145 406.912 891.978 403.019 891.81C286.416 886.796 188.674 850.444 119.457 782.177C50.2433 713.913 9.49626 613.68 6.98708 480.792Z");
 	var clubhousePath = new Path2D("M0.664496 160.396C0.489543 151.131 0.404886 145.938 0.664389 136.684C1.93296 91.4475 17.7845 57.4635 42.6806 34.7859C67.5822 12.1034 101.579 0.690202 139.208 0.689938C142.832 0.689912 145.89 0.636968 148.777 0.586972C154.093 0.494924 158.831 0.412874 165.469 0.689504C206.089 2.38216 238.384 13.5898 261.053 35.5175C283.72 57.4431 296.832 90.1541 298.947 134.998C298.966 135.402 298.985 135.799 299.003 136.191C299.516 147.032 299.822 153.49 298.948 164.605C295.985 202.28 286.888 233.729 266.221 256.817C245.563 279.896 213.272 294.699 163.752 298.931C153.551 299.802 147.272 299.519 137.908 299.097C136.709 299.042 135.458 298.986 134.142 298.929C94.8087 297.238 61.8738 284.978 38.5625 261.986C15.2544 238.998 1.51095 205.225 0.664496 160.396Z");
 	
 
@@ -86,23 +86,23 @@
 		ctx.clip(clubhousePathClip);
 
 		// Ring subito
-		ctx.drawImage(rings[ringSelection].image, 0, 0, 300, 300)
+		ctx.drawImage(rings[ringSelection].image, 0, 0, 900, 900)
 		
 		// Aggiunge immagine
 		setTimeout(() => {
 			
 			// Calcolo proporzioni
-			var proporzione = curWidth/300;
+			var proporzione = curWidth/900;
 			var altezzaDaUsare = curHeight/proporzione
-			var larghezzaDaUsare = 300
-			var offsetY = -(altezzaDaUsare-300)/2
+			var larghezzaDaUsare = 900
+			var offsetY = -(altezzaDaUsare-900)/2
 			var offsetX = 0
 			
 			// Disegno l'immagine
 			ctx.drawImage(newImage, offsetX, offsetY, larghezzaDaUsare, altezzaDaUsare)
 			
 			// Disegno l'anello
-			ctx.drawImage(rings[ringSelection].image, 0, 0, 300, 300)
+			ctx.drawImage(rings[ringSelection].image, 0, 0, 900, 900)
 
 			// Disegno bordino bianco
 			// ctx.lineWidth = lineWidth + 10;
@@ -181,7 +181,7 @@
 					<img src={"images/anteprima_"+ringSelection+".svg"} alt="">
 				{/if}
 	
-				<canvas id="myCanvas" height="300" width="300"></canvas>
+				<canvas id="myCanvas" height="900" width="900"></canvas>
 
 			</div>
 			
@@ -282,15 +282,19 @@
 		width: 300px;
 		height: 300px;
 		position: relative;
+		overflow: hidden;
 
 		cursor: pointer;
 	}
 
 	canvas {
-		/* border: 1px solid red; */
+		border: 1px solid red;
 		margin-bottom: 40px;
 		background-color: transparent;
 		/* background-image: url("images/anteprima.png"); */
+
+		transform-origin: 0 0;
+		transform: scale(0.333, 0.333);
 
 		position: absolute;
 		top: 0;
