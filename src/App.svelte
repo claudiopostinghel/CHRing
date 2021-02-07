@@ -49,34 +49,38 @@
 		ctx.beginPath()
 		
 		// context.scale(0.5,0.5)
+
+		// Clip
 		ctx.lineWidth = lineWidth;
 		ctx.clip(clubhousePath);
+
+		// Inutile, ma fa il cerchio
 		ctx.strokeStyle = lineColor;
 		ctx.stroke(clubhousePath);
 		
+		// Aggiunge immagine
 		setTimeout(() => {
-			console.log("X " + curWidth);
-			console.log("Y " + curHeight);
-
+			
+			// Calcolo proporzioni
 			var proporzione = curWidth/300;
 			var altezzaDaUsare = curHeight/proporzione
 			var larghezzaDaUsare = 300
 			var offsetY = -(altezzaDaUsare-300)/2
 			var offsetX = 0
-
-			console.log("La proporzione è " + proporzione);
 			
+			// Disegno l'immagine
 			ctx.drawImage(newImage, offsetX, offsetY, larghezzaDaUsare, altezzaDaUsare)
 
 			// Disegno bordino bianco
 			ctx.lineWidth = lineWidth + 10;
 			ctx.strokeStyle = "#FFFFFF"
 			ctx.stroke(clubhousePath);
-
+			
 			// Disegno bordino bianco
 			ctx.lineWidth = lineWidth;
 			ctx.strokeStyle = lineColor;
 			ctx.stroke(clubhousePath);
+			
 		}, 1000);
 
 		downloadable = true;
