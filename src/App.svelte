@@ -105,6 +105,10 @@
 		}
 	}
 
+	function triggerAlternativeUpload() {
+		document.getElementById("file").click()
+	}
+
 
 </script>
 
@@ -113,16 +117,18 @@
 	<h4>Stand out!</h4>
 	<p>Rooms are crowded. Never go unnoticed, thanks to <a href="https://en.wikipedia.org/wiki/Gestalt_psychology">Gestalt psychology</a></p>
 
-	<div id="promoteSpace" class="darkContainer dotted" style="padding:12px 24px; display: flex; flex-direction: row;">
-		<img id="plusImage" src="images/plus.svg" alt="plus icon">
-		Do you want this space? — Let's talk!
-	</div>
+	<a href="mailto:claudiopostinghel@gmail.com" target="_blank" rel="noopener noreferrer">
+		<div id="promoteSpace" class="darkContainer dotted" style="padding:12px 24px; display: flex; flex-direction: row;">
+			<!-- <img id="plusImage" src="images/plus.svg" alt="plus icon"> -->
+			Promote your event on CH her
+		</div>
+	</a>
 
 	<div class="card">
 
 		<center>
 
-			<div id="canvasSpace">
+			<div id="canvasSpace" on:click={triggerAlternativeUpload}>
 
 				{#if !uploaded}
 					<img src="images/anteprima.png" alt="">
@@ -186,6 +192,10 @@
 		border: 2px dotted #6E664E;
 		justify-content: left;
 		align-items: center;
+
+		background-color: transparent;
+
+		cursor: pointer;
 	}
 
 	#plusImage {
@@ -216,6 +226,8 @@
 		height: 300px;
 		width: 300px;
 		position: relative;
+
+		cursor: pointer;
 	}
 
 	canvas {
@@ -265,7 +277,6 @@
 		background: #56AB68;
 		box-shadow: 0px 16px 60px rgba(86, 171, 104, 0.5);
 		border-radius: 1000px;
-		cursor: pointer;
 	}
 
 	.btn {
@@ -278,6 +289,8 @@
 		color: #FFFFFF;
 		border: none;
 		font-size: 24px;
+
+		cursor: pointer !important;
 	}
 
 	/* .btn.disabled {
@@ -290,11 +303,8 @@
 		left: 0;
 		top: 0;
 		opacity: 0;
+
+		cursor: pointer !important;
 	}
 
-	/* @media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	} */
 </style>
