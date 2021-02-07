@@ -372,11 +372,10 @@
 		font-size: 24px;
 
 		cursor: pointer !important;
-	}
-	/* select::-ms-expand {
-		display: none;
-	} */
 
+		-webkit-appearance: none;
+	}
+	
 	#download {
 		margin-top: 32px;
 	}
