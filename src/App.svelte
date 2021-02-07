@@ -160,7 +160,7 @@
 	<a href="mailto:claudiopostinghel@gmail.com" target="_blank" rel="noopener noreferrer">
 		<div id="promoteSpace" class="darkContainer dotted" style="padding:12px 24px; display: flex; flex-direction: row;">
 			<!-- <img id="plusImage" src="images/plus.svg" alt="plus icon"> -->
-			Promote your event on CH her
+			Promote your event on CH here
 		</div>
 	</a>
 	
