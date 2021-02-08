@@ -165,6 +165,15 @@
 			Promote your event on CH here
 		</div>
 	</a> -->
+
+	{#if uploaded}
+	
+	<center>
+		<a href="https://www.producthunt.com/posts/clubhouse-ring-with-gradients?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-clubhouse-ring-with-gradients" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=283769&theme=light" alt="Clubhouse ring — with ✨ gradients ✨ - Be the most notable avatar in the room! | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+	</center>
+	<br>
+		
+	{/if}
 	
 
 	<center>
@@ -176,10 +185,6 @@
 	<div class="card">
 
 		<center>
-
-			<!-- {#if uploaded}
-				<img id="editImage" src="images/edit-image.svg" alt="">
-			{/if} -->
 
 			<div id="canvasSpace" on:click={triggerAlternativeUpload}>
 				
@@ -307,7 +312,6 @@
 	}
 
 	.darkContainer {
-		position: ;
 		/* Dark closure */
 		background: #E6E3D6;
 		border-radius: 24px;
