@@ -177,11 +177,17 @@
 
 		<center>
 
+			<!-- {#if uploaded}
+				<img id="editImage" src="images/edit-image.svg" alt="">
+			{/if} -->
+
 			<div id="canvasSpace" on:click={triggerAlternativeUpload}>
+				
 
 				{#if !uploaded}
 					<img src={"images/anteprima_"+ringSelection+".svg"} alt="">
 				{/if}
+
 	
 				<canvas id="myCanvas" height="900" width="900"></canvas>
 
@@ -193,11 +199,13 @@
 				<input  type="file"  accept="image/*" name="myfile" id="file"  on:change={loadFile} />
 			</div>
 
+			
 			<form on:change|preventDefault={handleColorChange}>
-				<select bind:value={ringSelection}>
+				Change color ring:
+				<select bind:value={ringSelection} class={ringSelection}>
 					{#each ringsNames as ring}
 						<option value={ring}>
-							{ring}
+							{ring} 🔽
 						</option>
 					{/each}
 				</select>
@@ -226,9 +234,14 @@
 			<a href="https://bit.ly/3oY9c7u" style="font-weight:600 !important;">follow me on Twitter</a> :)</p>
 	</div>
 
-	<div class="darkContainer">
+	
+	<p style="text-align: center;">From Claus by <a href="http://bit.ly/3js6gyV">Belka</a></p>
+
+
+	<div class="darkContainer" style="margin-top: 40px">
 		<h4>Why does it work</h4>
 		<p>Simple, yet effective — it puts a contrast–ring that make you the most notable person in the room!</p>
+		<h4>How does it work</h4>
 		<blockquote>
 			Gestalt psychologists emphasized that organisms perceive entire patterns or configurations, not merely individual components. <br>
 			The view is sometimes summarized using the adage, "the whole is more than the sum of its parts." <br>
@@ -277,6 +290,14 @@
 		margin-right: 8px;
 	}
 
+	#editImage {
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		z-index: 100;
+	}
+
 	.darkContainer, .card {
 		display: flex;
 		flex-direction: column;
@@ -286,6 +307,7 @@
 	}
 
 	.darkContainer {
+		position: ;
 		/* Dark closure */
 		background: #E6E3D6;
 		border-radius: 24px;
@@ -327,6 +349,7 @@
 	}
 	
 	.card {
+		position: relative;
 		/* Card */
 		background: #FFFFFF;
 		/* Elevation */
@@ -384,7 +407,16 @@
 		font-size: 24px;
 
 		cursor: pointer !important;
+	}
 
+	.Orange {
+		background: #FF7314;
+	}
+	.Blue {
+		background: #04C2C2;
+	}
+	.Green {
+		background: #8AB014;
 	}
 
 	#download {
