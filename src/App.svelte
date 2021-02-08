@@ -207,7 +207,7 @@
 				<button id="download" class="btn" on:click={downloadAvatar} >😍 Download</button>
 				<br>
 				<p style="margin-top: 20px">
-					Problem with your browser?<br>Long press and save the image below 👇
+					Problem with your browser?<br>Long press and save the image below<br>👇
 				</p>
 			{/if}
 
@@ -228,7 +228,7 @@
 
 	<div class="darkContainer">
 		<h4>Why does it work</h4>
-		<p>Simple, yet effective — it put a contrast–ring that make you the most notable person in the room!</p>
+		<p>Simple, yet effective — it puts a contrast–ring that make you the most notable person in the room!</p>
 		<blockquote>
 			Gestalt psychologists emphasized that organisms perceive entire patterns or configurations, not merely individual components. <br>
 			The view is sometimes summarized using the adage, "the whole is more than the sum of its parts." <br>
